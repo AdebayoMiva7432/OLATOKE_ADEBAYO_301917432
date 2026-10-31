@@ -1,7 +1,13 @@
-# ADEBAYO OLATOKE — MIT 8103
+# SwiftCart Nigeria: E-commerce Management System
 
-Student ID: 301917432
+ADEBAYO OLATOKE · Student ID 301917432
 
-SwiftCart Nigeria: E-commerce Management System
+The portfolio uses fictional records for SwiftCart Nigeria: E-commerce Management System.
 
-The portfolio is being generated. Completed stages will appear in the commit history.
+- [Portfolio 1](portfolio-1-database-design/)
+- [Portfolio 2](portfolio-2-query-optimisation/)
+- [Portfolio 3](portfolio-3-transactions-concurrency/)
+- [Portfolio 4](portfolio-4-nosql/)
+- [Portfolio 5](portfolio-5-distributed-cloud/)
+
+[Final summary](OLATOKE_ADEBAYO_301917432_FinalSummary.md) · [PDF](OLATOKE_ADEBAYO_301917432_FinalSummary.pdf)

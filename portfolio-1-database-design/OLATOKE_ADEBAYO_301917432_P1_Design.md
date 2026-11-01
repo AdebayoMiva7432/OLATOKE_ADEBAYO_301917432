@@ -85,3 +85,36 @@ My case study records customers, products, orders, order_items.
 - An order contains at most one line per product; the database enforces this with a unique constraint on order_id and product_id.
 - The normalisation example uses order_items as the root row with foreign keys to orders and products; customer is reached only through orders.
 
+## Normalisation
+
+The SwiftCart Nigeria database was designed using the principles of
+normalisation to reduce unnecessary data duplication, improve data
+consistency and maintain data integrity.
+
+### First Normal Form (1NF)
+
+The database satisfies First Normal Form because each field stores
+a single, atomic value. There are no repeating groups or multiple
+values stored in one field. Each table has a primary key to identify
+individual records.
+
+### Second Normal Form (2NF)
+
+The database design supports Second Normal Form because non-key
+attributes depend on their relevant keys. Order-line information,
+including quantity and unit price, is stored in the order_items
+table and associated with the relevant order and product.
+
+### Third Normal Form (3NF)
+
+The database design supports Third Normal Form because customer,
+product and order information are stored in separate tables.
+Customer details are maintained in customers, product details in
+products, and order details in orders. Foreign keys connect these
+tables without unnecessarily repeating descriptive information.
+
+### Benefits of Normalisation
+
+Normalisation reduces data duplication, improves consistency,
+simplifies database maintenance and helps prevent update,
+insertion and deletion anomalies.

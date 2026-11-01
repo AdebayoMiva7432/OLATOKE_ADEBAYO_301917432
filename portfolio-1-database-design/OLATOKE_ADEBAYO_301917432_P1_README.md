@@ -58,6 +58,7 @@ The Portfolio 1 database-results screenshot records **Rejected** for all 30 inva
 
 Each invalid statement is intended to be rejected by its corresponding database constraint.
 
-## Reference
+## References
 
-- [PostgreSQL Documentation — Constraints](https://www.postgresql.org/docs/17/ddl-constraints.html)
+- PostgreSQL Global Development Group. [PostgreSQL Documentation — Constraints](https://www.postgresql.org/docs/17/ddl-constraints.html). Supports the database constraint concepts and behaviour implemented in this project.
+- Neon. [Neon Documentation](https://neon.com/docs). Documents the Neon platform used to host and manage the PostgreSQL database for this project.

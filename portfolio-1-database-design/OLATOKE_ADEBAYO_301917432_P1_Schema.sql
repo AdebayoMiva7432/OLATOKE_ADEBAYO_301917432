@@ -69,3 +69,4 @@ ADD CONSTRAINT "order_item_price_nonnegative"
 CHECK ("unit_price" >= 0);
 
 COMMIT;
+

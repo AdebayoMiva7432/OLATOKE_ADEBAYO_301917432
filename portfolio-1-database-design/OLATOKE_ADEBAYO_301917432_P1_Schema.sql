@@ -70,4 +70,3 @@ CHECK ("unit_price" >= 0);
 
 COMMIT;
 
-

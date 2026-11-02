@@ -129,5 +129,5 @@ Use a fresh database with the Portfolio 1 schema and sample data. Run OLATOKE_AD
 
 ## References
 
-- [PostgreSQL — EXPLAIN](https://www.postgresql.org/docs/17/using-explain.html)
-
+- [PostgreSQL — EXPLAIN](https://www.postgresql.org/docs/17/using-explain.html). Supports the explanation of query execution plans and performance measurements.
+- [Neon Documentation](https://neon.com/docs). Documents the Neon platform used to host and execute the PostgreSQL database for this project.

@@ -188,7 +188,7 @@ The optimisation script creates the `query_lab` schema. If it has already been c
    Used as the platform documentation for running SQL statements and inspecting query plans in the Neon SQL Editor.
 
 3. OpenAI. (n.d.). *ChatGPT capabilities overview*. OpenAI Help Center. https://help.openai.com/en/articles/9260256-chatgpt-capabilities-overview  
-   ChatGPT was used as an AI learning and documentation-support tool to explain SQL and execution-plan concepts, review the portfolio structure, and help improve the README. AI assistance is acknowledged; the student remains responsible for checking the SQL, database outputs, performance measurements and final submission.
+   ChatGPT was used as an AI learning and documentation-support tool to better explain SQL and execution-plan concepts, review the portfolio structure, and help improve the README. AI assistance is acknowledged.
 
 4. Neon. (n.d.). *Neon documentation*. https://neon.com/docs  
    General documentation for the PostgreSQL hosting platform used for this coursework.
@@ -198,4 +198,4 @@ The optimisation script creates the `query_lab` schema. If it has already been c
 
 ## 8. AI-use and verification note
 
-ChatGPT (OpenAI) assisted with learning explanations, reviewing the Portfolio 2 materials and improving this documentation. ChatGPT is not the source of the database execution results. SQL queries, screenshots and performance figures should be checked against the outputs produced in the student's Neon database. The student is responsible for understanding, verifying and explaining all submitted work.
+ChatGPT (OpenAI) assisted with learning explanations, reviewing the Portfolio 2 materials and improving this documentation. ChatGPT is not the source of the database execution results.

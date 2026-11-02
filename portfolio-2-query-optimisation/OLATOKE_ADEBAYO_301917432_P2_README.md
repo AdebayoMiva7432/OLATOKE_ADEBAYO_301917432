@@ -194,7 +194,7 @@ The optimisation script creates the `query_lab` schema. If it has already been c
    General documentation for the PostgreSQL hosting platform used for this coursework.
 
 5. SwiftCart Nigeria Portfolio 1 database schema and sample data. (2026). *Student's MIT8103 coursework implementation*.  
-   The case-study tables and sample query outputs in this portfolio are based on the student's Portfolio 1 implementation.
+   The case-study tables and sample query outputs in this portfolio are based on the Portfolio 1 implementation.
 
 ## 8. AI-use and verification note
 

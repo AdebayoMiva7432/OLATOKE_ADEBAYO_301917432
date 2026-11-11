@@ -37,7 +37,7 @@ The schema includes:
 
 The constraint-testing script contains **30 deliberately invalid INSERT statements** designed to test primary-key, unique, foreign-key, NOT NULL and CHECK constraints.
 
-The Portfolio 1 database-results screenshot records **Rejected** for all 30 invalid-data checks. This is the evidence summary for the negative tests. The screenshot does not display the individual PostgreSQL SQLSTATE codes, so this README does not claim that those codes were separately recorded.
+The Portfolio 1 database-results screenshot records **Rejected** for all 30 invalid-data checks. This is the evidence summary for the negative tests. The screenshot does not display the individual PostgreSQL SQLSTATE codes, so this README does not claim that those codes were separately recorded.This is more or less a control measure to keep the design in check and monitored.
 
 ## Project files
 

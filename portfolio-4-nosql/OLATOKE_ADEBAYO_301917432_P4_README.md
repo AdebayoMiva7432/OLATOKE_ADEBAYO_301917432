@@ -15,7 +15,7 @@ I used MongoDB collection order_events for order_placed and payment_recorded eve
 | details | Event metadata whose fields vary |
 
 
-In my Swiftcard project, each MongoDB event was designed to keeps a copy of the original order item, it uses IDs to link to the related customer, order and product, and leaves the embedded section empty. PostgreSQL is used to manage the main records.
+In my Swiftcard project, each MongoDB event was designed to keep a copy of the original order item, it uses IDs to link to the related customer, order and product, and leaves the embedded section empty. PostgreSQL is used to manage the main records.
 
 ## Example document
 

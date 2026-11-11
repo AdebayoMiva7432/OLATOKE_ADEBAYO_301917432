@@ -163,7 +163,9 @@ Execution Time: 0.148 ms
 
 - [Query results screenshot](screenshots/OLATOKE_ADEBAYO_301917432_P2_QueryResults.png)
 - [Index comparison screenshot](screenshots/OLATOKE_ADEBAYO_301917432_P2_IndexComparison.png)
-
+- [Query 1 execution plan](screenshots/OLATOKE_ADEBAYO_301917432_P2_Query1_ExecutionPlan.png)
+- [Query 2 execution plan](screenshots/OLATOKE_ADEBAYO_301917432_P2_Query2_ExecutionPlan.png)
+- [Query 3 execution plan](screenshots/OLATOKE_ADEBAYO_301917432_P2_Query3_ExecutionPlan.png)
 Supporting SQL scripts:
 
 - `OLATOKE_ADEBAYO_301917432_P2_Queries.sql` — the three case-study queries and their `EXPLAIN ANALYZE` commands.
@@ -198,4 +200,4 @@ The optimisation script creates the `query_lab` schema. If it has already been c
 
 ## 8. AI-use and verification note
 
-ChatGPT (OpenAI) assisted with learning explanations, reviewing the Portfolio 2 materials and improving this documentation. ChatGPT is not the source of the database execution results.
+ChatGPT (OpenAI) assisted with learning explanations, reviewing the Portfolio 2 materials and improving this documentation. ChatGPT is not the source of the database execution results and the final review was done by me before submission.

@@ -1,6 +1,6 @@
 # Portfolio 4 — NoSQL and Advanced Data Models
 
-I used MongoDB collection order_events for order_placed and payment_recorded events. These are fictional event examples based on orders, order_items, customers, products.
+I used MongoDB collection order_events for order_placed and payment_recorded events. These are more or less fictional event examples based on orders, order_items, customers, products.
 
 ## Document model
 
@@ -14,7 +14,8 @@ I used MongoDB collection order_events for order_placed and payment_recorded eve
 | references | IDs identifying the related orders, customers and products |
 | details | Event metadata whose fields vary |
 
-Each event stores a snapshot of its source `order_items` record. Related orders, customers and products are represented by IDs in `references`; their full details are not embedded. The `embedded` object is currently empty in all four sample documents. This is therefore a reference-based model with a source-record snapshot, rather than a model containing full embedded snapshots of every related record. PostgreSQL continues to enforce the relational rules.
+
+In my Swiftcard project, each MongoDB event was designed to keeps a copy of the original order item, it uses IDs to link to the related customer, order and product, and leaves the embedded section empty. PostgreSQL is used to manage the main records.
 
 ## Example document
 
@@ -224,7 +225,7 @@ db.getCollection("order_events").aggregate([{"$group":{"_id":"$eventType", "docu
 
 MongoDB inserted 4 documents. An invalid date type was rejected with code 121 and a repeated event ID with 11000. The collection still contained 4 valid documents. The compound eventType/occurredAt index supports those access fields; this exercise does not measure its speed.
 
-The details field can vary across event types, while the common fields have a validator. In these examples, `payment_recorded` contains illustrative metadata only; it does not represent a complete payment record. Events can be added as separate documents rather than growing one large history record.
+The details field can vary across event types, while the common fields have a validator. In these examples, `payment_recorded` contains illustrative metadata only; it does not represent a complete payment record and events can be added as separate documents.
 
 ## Run the script
 

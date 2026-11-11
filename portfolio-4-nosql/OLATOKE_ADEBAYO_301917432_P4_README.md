@@ -9,12 +9,12 @@ I used MongoDB collection order_events for order_placed and payment_recorded eve
 | _id | Unique string event ID |
 | eventType | One of the two selected case event labels |
 | occurredAt | Native BSON Date; sample timestamps are in 2030 |
-| source | Original entity, primary key and saved JSON snapshot |
-| embedded | Linked record snapshots read with the event |
-| references | Keys for linked sources kept outside the embedded snapshots |
+| source | Original `order_items` record, its key and saved snapshot |
+| embedded | Reserved for linked-record details; empty in the current sample documents |
+| references | IDs identifying the related orders, customers and products |
 | details | Event metadata whose fields vary |
 
-Related source details are stored as snapshots with the event. This makes an event readable in one document. It duplicates some information, and later SQL changes do not automatically update the snapshots. PostgreSQL continues to enforce the relational rules.
+Each event stores a snapshot of its source `order_items` record. Related orders, customers and products are represented by IDs in `references`; their full details are not embedded. The `embedded` object is currently empty in all four sample documents. This is therefore a reference-based model with a source-record snapshot, rather than a model containing full embedded snapshots of every related record. PostgreSQL continues to enforce the relational rules.
 
 ## Example document
 
@@ -103,7 +103,9 @@ Selected fields from the returned documents:
       "$date": "2030-01-01T10:00:00Z"
     },
     "source": {
-      "id": 4
+      "key": {
+        "id": 4
+      }
     }
   },
   {
@@ -113,7 +115,9 @@ Selected fields from the returned documents:
       "$date": "2030-01-01T10:02:00Z"
     },
     "source": {
-      "id": 8
+      "key": {
+        "id": 8
+      }
     }
   }
 ]
@@ -220,7 +224,7 @@ db.getCollection("order_events").aggregate([{"$group":{"_id":"$eventType", "docu
 
 MongoDB inserted 4 documents. An invalid date type was rejected with code 121 and a repeated event ID with 11000. The collection still contained 4 valid documents. The compound eventType/occurredAt index supports those access fields; this exercise does not measure its speed.
 
-The details field can vary across event types, while the common fields have a validator. Events can be added as separate documents rather than growing one large history record.
+The details field can vary across event types, while the common fields have a validator. In these examples, `payment_recorded` contains illustrative metadata only; it does not represent a complete payment record. Events can be added as separate documents rather than growing one large history record.
 
 ## Run the script
 

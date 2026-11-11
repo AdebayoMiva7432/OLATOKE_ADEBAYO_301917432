@@ -4,7 +4,7 @@ This is the proposed distributed design for the case study.
 
 ## Case and proposed deployment
 
-SwiftCart Nigeria: E-commerce Management System keeps its relational records in PostgreSQL. MongoDB stores order_events: Store an append-oriented event document per order change, with the order identifier, event timestamp and type, a customer snapshot, and relevant embedded line-item and product snapshots for event-time context. Proposed deployment: the application connects to a three-member MongoDB replica set across three availability zones in one region. PostgreSQL also needs its own managed high-availability configuration. These are separate databases; a MongoDB replica set does not replicate PostgreSQL.
+SSwiftCart Nigeria uses PostgreSQL to store its main business records and also uses the database MongoDB to store order events. Each event records order changes and keeps relevant customer product and order details. The proposed design uses the three MongoDB servers across three availability zones for better availability and avoid any form of disruptions. PostgreSQL will have its own separate high availability setup.
 
 ## Replication and availability
 
@@ -12,7 +12,7 @@ One primary accepts writes. Two secondaries copy the oplog asynchronously. If th
 
 ## Consistency and the case
 
-For order_events, a proposed client policy is majority write concern with a finite timeout, primary reads and majority read concern where committed data is required. Secondary reads can lag. Application retries need an idempotency key so the same event is not recorded twice. PostgreSQL constraints remain authoritative for Each customer email is required and unique. These settings do not create an atomic transaction across PostgreSQL and MongoDB. An outbox and retrying consumer would be a separate implementation.
+SwiftCart Nigeria use PostgreSQL for storing its main business records, while MongoDB store the order events. Each event keep records of order changes, including customer, product and order details. The proposed design use three MongoDB servers across three availability zones to improve availability. PostgreSQL will also have its own separate high-availability setup.
 
 ## Sharding trade-off
 
@@ -20,7 +20,7 @@ Sharding partitions documents; replication copies them for availability. The sma
 
 ## Cloud deployment and recovery
 
-A real deployment would use private networking, authentication, least-privilege roles, TLS, monitoring and tested backups. Replication also copies accidental deletions, so it does not replace backups. Availability zones do not provide regional disaster recovery. No cloud service was provisioned and no failover, replication, sharding or recovery experiment was run for this discussion.
+A real deployment would uses private networking, authentication, least-privilege roles, TLS, monitoring and tested backups. Replication also copy accidental deletions, so it does not replaces backups. Availability zones does not provide regional disaster recovery. No cloud service was provisioned, and no failover, replication, sharding or recovery experiments was carried out for this discussion.
 
 ## References
 

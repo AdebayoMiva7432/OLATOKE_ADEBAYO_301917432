@@ -4,9 +4,7 @@
 
 ## Case study
 
-My case study is SwiftCart Nigeria: E-commerce Management System. It focuses on designing a database for an online business where customers can browse and order products. The database stores information about customers, products, orders and order items in four separate tables: `customers`, `products`, `orders` and `order_items`.
-
-The database supports creating orders and their product lines, committing or rolling back transactions, joining order lines to orders, customers and products to inspect purchases, filtering orders by date and status, and aggregating sales by product. I also benchmarked the same order-date range lookup on 20,000 synthetic orders with and without a B-tree index, then compared the query plans and recorded the measurements.
+My case study is SwiftCart Nigeria: E-commerce Management System. it is all about a design of a database for customers online by browsing and ordering products online and it also store data by reviewing orders and product sales, with separate tables named customers, products, orders and order_items. This supports these operations, i.e create orders and their product lines, then commit or roll back the transaction; join order lines to orders, customers, and products to inspect purchases; filter orders by date and status; aggregate line sales by product; benchmark the same order_date range lookup on 20000 synthetic orders with and without a B-tree index; compare query plans and record measurements without assuming an outcome.
 
 ## Portfolio 1: Database Design and Modelling
 
@@ -44,11 +42,11 @@ I proposed three MongoDB replica-set members across separate failure zones. The 
 
 ## Individual reflection
 
-I kept customers, products, orders and order items in separate tables so their details could be maintained without repeating them in every related record. The order-item quantity must be greater than zero. The constraint tests check this rule alongside required values and record links. One issue illustrated by the two-session exercise is that both sessions can read the same value before either update is committed. Locking the row before reading preserves both increments. The index comparison also shows why I need to check the execution plan as well as the final result: the same result can require different amounts of database work.
+I designed separate tables to reduce data repetition, also used constraints to maintain data accuracy, and applied row locking to prevent conflicting updates. I also learned that execution plans help me to compare database query performance.
 
 ## AI-use declaration
 
-I used GitHub Copilot and Portfolio Generator to assist with preparing and reviewing scripts. I used Neon PostgreSQL to create, execute and test the relational database scripts. I also used ChatGPT for explanations, guidance and troubleshooting during this coursework. I remain responsible for the work submitted and for understanding the database concepts and results.
+I used GitHub Copilot and Portfolio Generator to assist with preparing and reviewing scripts. I also used Neon PostgreSQL to create, execute and test the relational database scripts likewise ChatGPT for explanations, guidance and troubleshooting during this coursework.I remain responsible as all these tools helps to have a much easier and better understanding to completing this accessment.
 
 ## References
 

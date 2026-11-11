@@ -4,11 +4,11 @@
 
 ## Case study
 
-My case study is SwiftCart Nigeria: E-commerce Management System. it is all about a design of a database for customers online by browsing and ordering products online and it also store data by reviewing orders and product sales, with separate tables named customers, products, orders and order_items. This supports these operations, i.e create orders and their product lines, then commit or roll back the transaction; join order lines to orders, customers, and products to inspect purchases; filter orders by date and status; aggregate line sales by product; benchmark the same order_date range lookup on 20000 synthetic orders with and without a B-tree index; compare query plans and record measurements without assuming an outcome.
+My case study is SwiftCart Nigeria: E-commerce Management System. It is all about designing a database for online customers who browse and order products, and it also store data for reviewing orders and product sales. It has four separate tables called customers, products, orders and order_items. This support different operations, such as creating orders and their product lines, then committing or rolling back the transaction; joining order lines with orders, customers and products to inspect purchases; filtering orders by date and status; and calculating total sales for each product. It also involve benchmarking the same order_date range lookup on 20,000 synthetic orders, with and without a B-tree index, comparing query plans and recording measurements without assuming the results.
 
 ## Portfolio 1: Database Design and Modelling
 
-I organised the relational design into four tables. Primary keys identify records, foreign keys preserve relationships, and check constraints enforce the stated business rules. For example, an order item's quantity must be greater than zero. The normalisation examples show the sample data in first, second and third normal forms (1NF, 2NF and 3NF). All 30 deliberately invalid inserts were rejected, and the valid sample rows remained unchanged. These tests demonstrate how constraints help validate the database design.
+I organised the relational design into four tables. Primary keys identifies records, foreign keys maintains relationships, and check constraints enforce the stated business rules. For example, an order item's quantity must be greater than zero. The normalisation examples shows the sample data in first, second and third normal forms (1NF, 2NF and 3NF). All 30 deliberately invalid inserts was rejected, and the valid sample rows remains unchanged. These tests demonstrates how constraints helps to validate the database design.
 
 ![SwiftCart Nigeria: E-commerce Management System ER diagram](images/OLATOKE_ADEBAYO_301917432_ERDiagram.png)
 

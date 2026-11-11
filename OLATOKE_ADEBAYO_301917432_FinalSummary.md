@@ -4,11 +4,11 @@
 
 ## Case study
 
-My case study is SwiftCart Nigeria: E-commerce Management System. I designed the database for customers browsing and ordering products and store staff reviewing orders and product sales, with separate tables named customers, products, orders and order_items. It supports these operations: create orders and their product lines, then commit or roll back the transaction; join order lines to orders, customers, and products to inspect purchases; filter orders by date and status; aggregate line sales by product; benchmark the same order_date range lookup on 20000 synthetic orders with and without a B-tree index; compare query plans and record measurements without assuming an outcome.
+My case study is SwiftCart Nigeria: E-commerce Management System. it is all about a design of a database for customers online by browsing and ordering products online and it also store data by reviewing orders and product sales, with separate tables named customers, products, orders and order_items. This supports these operations, i.e create orders and their product lines, then commit or roll back the transaction; join order lines to orders, customers, and products to inspect purchases; filter orders by date and status; aggregate line sales by product; benchmark the same order_date range lookup on 20000 synthetic orders with and without a B-tree index; compare query plans and record measurements without assuming an outcome.
 
 ## Portfolio 1: Database Design and Modelling
 
-I organised the relational design into 4 tables. Primary keys identify records, foreign keys preserve the links, and checks enforce the stated business rules. Order item quantity must be greater than zero. The normalisation examples show the sample data at 1NF, 2NF and 3NF. All 30 deliberately invalid inserts were rejected without changing the valid sample rows.
+I organised the relational design into 4 tables. Primary keys identify records, foreign keys preserve the links, and checks enforce the stated business rules. Order item quantity must be greater than zero. The normalisation examples show the sample data at 1NF, 2NF and 3NF. All 30 deliberately invalid inserts were rejected without changing the valid sample rows.This approach is form of validation to test the workbility of this project.
 
 ![SwiftCart Nigeria: E-commerce Management System ER diagram](images/OLATOKE_ADEBAYO_301917432_ERDiagram.png)
 
@@ -47,7 +47,7 @@ I kept customers, products, orders, order_items in separate tables so their deta
 
 ## AI-use declaration
 
-I used GitHub Copilot and the portfolio generator to help prepare the database model, scripts and explanations. The generator ran the PostgreSQL and MongoDB exercises, checked their outputs and captured the result images.  I remain responsible for checking and explaining the submitted work.
+I used GitHub Copilot and Portfolio Generator to assist with preparing and reviewing scripts. I also used Neon PostgreSQL to create, execute and test the relational database scripts likewise ChatGPT for explanations, guidance and troubleshooting during this coursework.I remain responsible as all these tools helps to have a much easier and better understanding to completing this accessment.
 
 ## References
 

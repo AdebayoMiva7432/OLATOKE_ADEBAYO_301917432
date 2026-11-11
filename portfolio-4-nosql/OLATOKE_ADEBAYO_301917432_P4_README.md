@@ -141,7 +141,8 @@ Selected fields from the returned documents:
       "$date": "2030-01-01T10:00:00Z"
     },
     "source": {
-      "id": 4
+  "key": {
+    "id": 4
     }
   },
   {
@@ -151,6 +152,7 @@ Selected fields from the returned documents:
       "$date": "2030-01-01T10:01:00Z"
     },
     "source": {
+    "key": {
       "id": 4
     }
   }
@@ -174,7 +176,8 @@ Selected fields from the returned documents:
       "$date": "2030-01-01T10:00:00Z"
     },
     "source": {
-      "id": 4
+  "key": {
+    "id": 4
     }
   },
   {
@@ -184,7 +187,8 @@ Selected fields from the returned documents:
       "$date": "2030-01-01T10:01:00Z"
     },
     "source": {
-      "id": 4
+  "key": {
+    "id": 4
     }
   },
   {
@@ -193,8 +197,9 @@ Selected fields from the returned documents:
     "occurredAt": {
       "$date": "2030-01-01T10:02:00Z"
     },
-    "source": {
-      "id": 8
+     "source": {
+  "key": {
+    "id": 8
     }
   },
   {
@@ -203,8 +208,9 @@ Selected fields from the returned documents:
     "occurredAt": {
       "$date": "2030-01-01T10:03:00Z"
     },
-    "source": {
-      "id": 8
+     "source": {
+  "key": {
+    "id": 8
     }
   }
 ]
@@ -225,7 +231,7 @@ db.getCollection("order_events").aggregate([{"$group":{"_id":"$eventType", "docu
 
 MongoDB inserted 4 documents. An invalid date type was rejected with code 121 and a repeated event ID with 11000. The collection still contained 4 valid documents. The compound eventType/occurredAt index supports those access fields; this exercise does not measure its speed.
 
-The details field can vary across event types, while the common fields have a validator. In these examples, `payment_recorded` contains illustrative metadata only; it does not represent a complete payment record and events can be added as separate documents.
+The details field can vary across event types while the common fields have a validator. In these examples, `payment_recorded` contains illustrative metadata only as it does not represent a complete payment record and events can be added as separate documents.
 
 ## Run the script
 
